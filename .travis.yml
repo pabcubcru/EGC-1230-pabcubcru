@@ -21,7 +21,7 @@ before_script:
   - psql -U postgres -c "ALTER USER pabcubcru CREATEDB"
   - python manage.py migrate
 script:
-  - python manage.py test census
+  - python manage.py test voting
 notifications:
  email: 
     on_success: always
@@ -31,4 +31,6 @@ deploy:
   app: pabcubcruexamen1230
   strategy: git
   api_key: $HEROKU_AUTH_TOKEN
+
+
 
